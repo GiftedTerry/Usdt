@@ -12,7 +12,7 @@ function verifyWalletAddress() {
   const walletInput = document.querySelector('input[name="wallet"]');
   const walletValue = walletInput.value.trim();
 
-  fetch(`https://api.trongrid.io/v1/accounts/' + walletValue, {
+  fetch('https://api.trongrid.io/v1/accounts/' + walletValue, {
     headers: {
       'Tron-Api-Key': '372bcc21-b2b7-4e06-9cde-37071ce735b0'
     }
