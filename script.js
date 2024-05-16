@@ -92,3 +92,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   e.preventDefault();
   $('#captchaModal').modal('show');
 });
+}
+
+document.getElementById("withdrawal-btn").addEventListener("click", function() {
+  document.getElementById("withdrawal-alert").style.display = "block";
+});
