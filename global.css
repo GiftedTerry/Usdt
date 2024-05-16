@@ -91,30 +91,6 @@ border-radius: 10px;
 border-radius: 10px;
 }
 
-.btn-telegram {
-background-color: white;
-border: 1px solid #0088CC;
-color: #0088CC;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 5px;
-}
-
-.btn-telegram:hover {
-background-color: #0088CC;
-border-color: #0088CC;
-color: white;
-}
-
-.btn-telegram:focus {
-box-shadow: 0 0 0 0.2rem rgba(0, 136, 204, 0.5);
-}
-
-.btn-telegram .fa {
-font-size: 1.2rem;
-}
-
 .btn.custom-btn .bi-check {
 margin-right: 5px;
 font-size: 16px;
