@@ -45,16 +45,6 @@ function verifyWalletAddress() {
     });
 }
 
-function verifyCaptcha() {
-  const response = hcaptcha.getResponse();
-  if (!response) {
-    alert('Por favor, completa el captcha.');
-  } else {
-    $('#captchaModal').modal('hide');
-    verifyWalletAddress();
-  }
-}
-
 $(document).ready(function() {
   $('#successModal form').on('submit', function(event) {
     event.preventDefault();
@@ -92,8 +82,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   e.preventDefault();
   $('#captchaModal').modal('show');
 });
-}
 
-document.getElementById("withdrawal-btn").addEventListener("click", function() {
-  document.getElementById("withdrawal-alert").style.display = "block";
-});
